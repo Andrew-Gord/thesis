@@ -1,3 +1,4 @@
+<ion-header id="contents">
 <ion-menu contentId="main-content">
   <ion-header>
     <ion-toolbar>
@@ -30,6 +31,27 @@
       <ion-title>Settings</ion-title>
     </ion-toolbar>
 </div>
-
+</ion-header>
 
 <!-- Above is for the menu, below is for the actual settings page -->
+<ion-content id="contents" class="general">
+  <ion-title class="general">General Settings</ion-title>
+  <ion-list>
+    <ion-item class="general">
+      <ion-select label="Start of the week" labelPlacement="floating" value="Sunday">
+        <ion-select-option value="Sunday">Sunday</ion-select-option>
+        <ion-select-option value="Saturday">Saturday</ion-select-option>
+        <ion-select-option value="Monday">Monday</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="general">
+      <ion-select label="Theme" labelPlacement="floating" value="Default">
+        <ion-select-option value="White">White</ion-select-option>
+        <ion-select-option value="Dark">Dark</ion-select-option>
+        <ion-select-option value="Default">Default</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-toggle class="general" labelPlacement="end">Use device time zone</ion-toggle>
+    <ion-toggle class="general" labelPlacement="end" [checked]="true">Show completed assignments</ion-toggle>
+  </ion-list>
+</ion-content>
